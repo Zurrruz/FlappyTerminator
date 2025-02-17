@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2380610364260083406}
   - component: {fileID: 7234910476352001200}
   - component: {fileID: 7975132158287173433}
-  - component: {fileID: 8576759471416132773}
+  - component: {fileID: 6756566386597034439}
   m_Layer: 0
   m_Name: BulletEnemy
   m_TagString: Untagged
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb479bc1bbe2dc04792cd2870bffdfc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8576759471416132773
+--- !u!114 &6756566386597034439
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,6 +185,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3346504502238660627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de88634e43ca93b49b267c6ab1259067, type: 3}
+  m_Script: {fileID: 11500000, guid: 10d9a65aa4bf5c449ad88eeb81791fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

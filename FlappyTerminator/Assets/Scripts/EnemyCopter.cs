@@ -1,14 +1,12 @@
-using System;
 using UnityEngine;
 
 public class EnemyCopter : MonoBehaviour
 {
-    [SerializeField] private ReturnPool _returnPool;
+    [SerializeField] private PoolReturn _poolReturn;
+    [SerializeField] private int _victoryPoint;
 
     public void Ñrush()
     {
-        _returnPool.Back();
-
-        ScoreCounter.IncreaseCount();
+        _poolReturn.Back(_victoryPoint);
     }
 }

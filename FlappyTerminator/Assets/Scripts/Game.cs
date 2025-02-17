@@ -6,6 +6,7 @@ public class Game : MonoBehaviour
     [SerializeField] private Copter _copter;
     [SerializeField] private StartScreen _startScreen;
     [SerializeField] private EndGameScreen _endGameScreen;
+    [SerializeField] private ScoreCounter _scoreCounter;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class Game : MonoBehaviour
     {
         _copter.GameOver -= GameOver;
         _startScreen.PlayButtonClicked -= OnPlayButtonClick;
+        _endGameScreen.RestartButtonClicked -= OnRestartButtonClick;
     }
 
     private void OnPlayButtonClick()
@@ -34,7 +36,7 @@ public class Game : MonoBehaviour
     private void OnRestartButtonClick()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        ScoreCounter.Restart();
+        _scoreCounter.Restart();
     }
 
     private void StartGame()

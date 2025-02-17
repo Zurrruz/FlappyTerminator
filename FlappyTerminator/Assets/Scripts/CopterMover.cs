@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class CopterMover : MonoBehaviour
 {
+    [SerializeField] private InputService _inputService;
+
     [SerializeField] private float _tapForce;
     [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
@@ -23,7 +25,7 @@ public class CopterMover : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (_inputService.Up)
         {
             _rigidbody2D.velocity = new Vector2(_speed, _tapForce);
             transform.rotation = _maxRotation;
