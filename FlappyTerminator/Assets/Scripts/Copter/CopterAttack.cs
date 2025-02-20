@@ -33,11 +33,11 @@ public class CopterAttack : MonoBehaviour
 
             _canShoot = false;
 
-            StartCoroutine(Timer());
+            StartCoroutine(Recharge());
         }
     }
 
-    private IEnumerator Timer()
+    private IEnumerator Recharge()
     {
         yield return _time;
         _canShoot = true;

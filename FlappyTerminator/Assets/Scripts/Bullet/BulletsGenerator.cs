@@ -11,7 +11,7 @@ public class BulletsGenerator : ObjectsGenerator
 
     protected override void Spawn()
     {
-        var bullet = _pool.GetObject();
+        var bullet = Pool.GetObject();
 
         bullet.transform.position = _pointCreation.position;
         bullet.transform.rotation = _pointCreation.rotation;

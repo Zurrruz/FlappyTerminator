@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 
 public class BulletCollisionHandler : MonoBehaviour
 {
-    [SerializeField] private PoolReturn _poolReturn;
+    [SerializeField] private PoolingReturner _poolReturn;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

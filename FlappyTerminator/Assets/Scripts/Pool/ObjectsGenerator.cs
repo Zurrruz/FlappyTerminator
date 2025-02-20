@@ -3,12 +3,12 @@ using UnityEngine;
 
 public abstract class ObjectsGenerator : MonoBehaviour
 {
-    [SerializeField] protected float _delay;    
-    [SerializeField] protected ObjectPool _pool;
+    [SerializeField] protected float Delay;    
+    [SerializeField] protected ObjectPool Pool;
 
     protected IEnumerator Generate()
     {
-        var wait = new WaitForSeconds(_delay);
+        var wait = new WaitForSeconds(Delay);
 
         while (enabled)
         {

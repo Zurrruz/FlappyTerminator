@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7928720390169737086}
   - component: {fileID: 7800370660532017282}
   - component: {fileID: 868926998926100280}
-  - component: {fileID: -2380610364260083406}
   - component: {fileID: 7234910476352001200}
+  - component: {fileID: -2380610364260083406}
   - component: {fileID: 7975132158287173433}
-  - component: {fileID: 6756566386597034439}
+  - component: {fileID: 5859329872147524842}
   m_Layer: 0
   m_Name: BulletEnemy
   m_TagString: Untagged
@@ -116,19 +116,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2380610364260083406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3346504502238660627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf7a12f4c84a67428e1eee73ef2060a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 2
 --- !u!58 &7234910476352001200
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -164,6 +151,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.54
+--- !u!114 &-2380610364260083406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346504502238660627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf7a12f4c84a67428e1eee73ef2060a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 2
 --- !u!114 &7975132158287173433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb479bc1bbe2dc04792cd2870bffdfc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6756566386597034439
+--- !u!114 &5859329872147524842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,6 +185,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3346504502238660627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d9a65aa4bf5c449ad88eeb81791fe1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2af0ffe864ce4464893d8d787755a18c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

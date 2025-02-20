@@ -4,15 +4,16 @@ using UnityEngine;
 public class ScoreView : MonoBehaviour
 {
     [SerializeField] private TMP_Text _countText;
+    [SerializeField] private ScoreCounter _scoreCounter;
 
     private void OnEnable()
     {
-        ScoreCounter.CountChanged += ShowCount;
+        _scoreCounter.CountChanged += ShowCount;
     }
 
     private void OnDisable()
     {
-        ScoreCounter.CountChanged -= ShowCount;
+        _scoreCounter.CountChanged -= ShowCount;
     }
 
     private void ShowCount(int count)

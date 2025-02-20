@@ -7,7 +7,7 @@ public class ScoreCounter : MonoBehaviour
 
     private int _count = 0;
 
-    public static event Action<int> CountChanged;
+    public event Action<int> CountChanged;
 
     private void OnEnable()
     {
@@ -19,16 +19,18 @@ public class ScoreCounter : MonoBehaviour
         _enemyGenerator.Created -= FollowEventEnemyDestroyed;
     }
 
-    private void FollowEventEnemyDestroyed(PoolReturn poolReturn)
+    private void FollowEventEnemyDestroyed(EnemyCopter enemyCopter)
     {
-        poolReturn.EnemyDestroyed += IncreaseCount;
+        enemyCopter.EnemyDestroyed += IncreaseCount;
+
+        if (enemyCopter is EnemyCopter) { }
     }
 
-    private void IncreaseCount(int victoryPoint, PoolReturn poolReturn)
+    private void IncreaseCount(int victoryPoint, EnemyCopter enemyCopter)
     {
         _count += victoryPoint;
 
-        poolReturn.EnemyDestroyed -= IncreaseCount;
+        enemyCopter.EnemyDestroyed -= IncreaseCount;
 
         CountChanged?.Invoke(_count);
     }

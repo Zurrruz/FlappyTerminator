@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    [SerializeField] private PoolReturn _prefab;
+    [SerializeField] private PoolingReturner _prefab;
 
-    private Queue<PoolReturn> _pool;
+    private Queue<PoolingReturner> _pool;
 
     private void Awake()
     {
-        _pool = new Queue<PoolReturn>();
+        _pool = new Queue<PoolingReturner>();
     }
 
-    private void PutObject(PoolReturn obj)
+    private void PutObject(PoolingReturner obj)
     {
         _pool.Enqueue(obj);
         obj.gameObject.SetActive(false);
@@ -24,7 +24,7 @@ public class ObjectPool : MonoBehaviour
         _pool.Clear();
     }
 
-    public PoolReturn GetObject()
+    public PoolingReturner GetObject()
     {
         if (_pool.Count == 0)
         {

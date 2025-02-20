@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 171069078642111787}
   - component: {fileID: -7866143964094257947}
   - component: {fileID: 5939218760620228533}
-  - component: {fileID: 815398194850945771}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -138,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83528a8f2f8012e4fb91db857c98751c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 6756566386597034439, guid: 952fc129f43631f4c8bb3e4ce78dc51b, type: 3}
+  _prefab: {fileID: 5859329872147524842, guid: 952fc129f43631f4c8bb3e4ce78dc51b, type: 3}
 --- !u!114 &171069078642111787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54c96863b854ba4ba5acfe23628f71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delay: 1
-  _pool: {fileID: 7541819591330445856}
+  Delay: 1
+  Pool: {fileID: 7541819591330445856}
   _pointCreation: {fileID: 2107458406110149130}
 --- !u!114 &-7866143964094257947
 MonoBehaviour:
@@ -166,7 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cfa5375cf6a1d94cb240453da4357b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _poolReturn: {fileID: 815398194850945771}
   _victoryPoint: 1
 --- !u!114 &5939218760620228533
 MonoBehaviour:
@@ -178,18 +176,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb479bc1bbe2dc04792cd2870bffdfc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &815398194850945771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276753225243541675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d9a65aa4bf5c449ad88eeb81791fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6705960255782689339
