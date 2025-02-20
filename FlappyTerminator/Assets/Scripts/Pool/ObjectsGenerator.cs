@@ -3,19 +3,19 @@ using UnityEngine;
 
 public abstract class ObjectsGenerator : MonoBehaviour
 {
-    [SerializeField] protected float Delay;    
-    [SerializeField] protected ObjectPool Pool;
+    [SerializeField] private float _delay;    
+    [SerializeField] private ObjectPool _pool;
 
     protected IEnumerator Generate()
     {
-        var wait = new WaitForSeconds(Delay);
+        var wait = new WaitForSeconds(_delay);
 
         while (enabled)
         {
             yield return wait;
-            Spawn();
+            Spawn(_pool);
         }
     }
 
-    protected abstract void Spawn();
+    protected abstract void Spawn(ObjectPool objectPool);
 }

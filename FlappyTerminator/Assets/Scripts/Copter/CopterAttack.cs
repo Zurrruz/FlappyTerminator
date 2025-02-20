@@ -17,14 +17,19 @@ public class CopterAttack : MonoBehaviour
         _time = new WaitForSeconds(_delay);
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        Shoot();
+        _inputService.Attacked += Shoot;
+    }
+
+    private void OnDisable()
+    {
+        _inputService.Attacked -= Shoot;
     }
 
     private void Shoot()
     {
-        if(_inputService.IsAttacking && _canShoot)
+        if(_canShoot)
         {
             var bullet = _pool.GetObject();
 

@@ -1111,8 +1111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26efa401cd02b344a87d76b02d9884d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Delay: 2
-  Pool: {fileID: 1423586113}
+  _delay: 2
+  _pool: {fileID: 1423586113}
   _lowerBound: 4
   _upperBound: -3
 --- !u!1 &1433802759

@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54c96863b854ba4ba5acfe23628f71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Delay: 1
-  Pool: {fileID: 7541819591330445856}
+  _delay: 1
+  _pool: {fileID: 7541819591330445856}
   _pointCreation: {fileID: 2107458406110149130}
 --- !u!114 &-7866143964094257947
 MonoBehaviour:

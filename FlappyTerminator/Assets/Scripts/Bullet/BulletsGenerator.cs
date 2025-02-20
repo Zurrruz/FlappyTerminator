@@ -9,11 +9,10 @@ public class BulletsGenerator : ObjectsGenerator
         StartCoroutine(Generate());
     }
 
-    protected override void Spawn()
+    protected override void Spawn(ObjectPool objectPool)
     {
-        var bullet = Pool.GetObject();
+        var bullet = objectPool.GetObject();
 
-        bullet.transform.position = _pointCreation.position;
-        bullet.transform.rotation = _pointCreation.rotation;
+        bullet.transform.SetPositionAndRotation(_pointCreation.position, _pointCreation.rotation);
     }
 }

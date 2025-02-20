@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Recorder.OutputPath;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class CopterMover : MonoBehaviour
@@ -15,7 +16,7 @@ public class CopterMover : MonoBehaviour
     private Quaternion _maxRotation;
     private Quaternion _minRotation;
 
-    private void Start()
+    private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -23,14 +24,29 @@ public class CopterMover : MonoBehaviour
         _minRotation = Quaternion.Euler(0, 0, _minRotationZ);
     }
 
+    private void OnEnable()
+    {
+        _inputService.Jumped += Jump;
+    }
+
+    private void OnDisable()
+    {
+        _inputService.Jumped -= Jump;
+    }
+
     private void Update()
     {
-        if (_inputService.Up)
-        {
-            _rigidbody2D.velocity = new Vector2(_speed, _tapForce);
-            transform.rotation = _maxRotation;
-        }
+        Rotate();
+    }
 
+    private void Jump()
+    {
+        _rigidbody2D.velocity = new Vector2(_speed, _tapForce);
+        transform.rotation = _maxRotation;
+    }
+
+    private void Rotate()
+    {
         transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
     }
 }

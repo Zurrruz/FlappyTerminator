@@ -13,12 +13,12 @@ public class EnemyGenerator : ObjectsGenerator
         StartCoroutine(Generate());
     }
 
-    protected override void Spawn()
+    protected override void Spawn(ObjectPool objectPool)
     {
         float spawnPositionY = UnityEngine.Random.Range(_upperBound, _lowerBound);
         Vector3 spawnPoint = new(transform.position.x, spawnPositionY, transform.position.z);
 
-        var enemy = Pool.GetObject();
+        var enemy = objectPool.GetObject();
         
         Created?.Invoke((EnemyCopter)enemy);
 

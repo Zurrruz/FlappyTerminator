@@ -22,8 +22,6 @@ public class ScoreCounter : MonoBehaviour
     private void FollowEventEnemyDestroyed(EnemyCopter enemyCopter)
     {
         enemyCopter.EnemyDestroyed += IncreaseCount;
-
-        if (enemyCopter is EnemyCopter) { }
     }
 
     private void IncreaseCount(int victoryPoint, EnemyCopter enemyCopter)
